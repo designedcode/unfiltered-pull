@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  --ivory: #f5f1e9;
+  --ivory-deep: #efe8dc;
+  --sage: #94a684;
+  --sage-deep: #6f8263;
+  --rose: #c9a3a0;
+  --terracotta: #c4785a;
+  --gold: #b89b5e;
+  --gold-deep: #9a7f45;
+  --charcoal: #2c2a28;
+  --ink: #3d3835;
+  --paper: #f9f6f0;
+}
+
+@theme inline {
+  --color-ivory: var(--ivory);
+  --color-ivory-deep: var(--ivory-deep);
+  --color-sage: var(--sage);
+  --color-sage-deep: var(--sage-deep);
+  --color-rose: var(--rose);
+  --color-terracotta: var(--terracotta);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --color-charcoal: var(--charcoal);
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --font-heading: var(--font-cormorant);
+  --font-body: var(--font-lato);
+  --font-accent: var(--font-montserrat);
+  --font-script: var(--font-script);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--ivory);
+  color: var(--ink);
+  font-family: var(--font-lato), system-ui, sans-serif;
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(184, 155, 94, 0.08), transparent 36%),
+    radial-gradient(circle at 88% 18%, rgba(148, 166, 132, 0.1), transparent 32%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  color: var(--charcoal);
+  letter-spacing: -0.02em;
+}
+
+.font-heading {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+.font-accent {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+}
+
+.font-script {
+  font-family: var(--font-script), cursive;
+}
+
+.paper-card {
+  background: linear-gradient(180deg, rgba(249, 246, 240, 0.96), rgba(245, 241, 233, 0.94));
+  border: 1px solid rgba(184, 155, 94, 0.28);
+  box-shadow: 0 16px 40px rgba(44, 42, 40, 0.06);
+}
+
+.glass-chip {
+  background: rgba(249, 246, 240, 0.72);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(184, 155, 94, 0.32);
+}
+
+.highlight {
+  background: linear-gradient(180deg, transparent 55%, rgba(201, 163, 160, 0.42) 55%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .motion-safe\:animate-pulse,
+  .animate-spin-slow,
+  .glow-moon,
+  .grow-vine {
+    animation: none !important;
+  }
+}
+
+@keyframes moon-glow {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.glow-moon {
+  animation: moon-glow 3.6s ease-in-out infinite;
+}
