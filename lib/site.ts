@@ -1,8 +1,9 @@
+import { brandSubtext } from "./copy";
+
 export const site = {
   name: "Unfiltered Pull",
   tagline: "RAW. REAL. REVEALED.",
-  description:
-    "Raw tarot, moon rituals, and spiritual guidance for emotional clarity. No fluff, no gatekeeping. Honest insight for love, patterns, and your next chapter.",
+  description: brandSubtext,
   url: "https://unfiltered-pull.vercel.app",
   email: "unfiltered.pull@gmail.com",
   instagramHandle: "tarotbyunfiltered.pull",

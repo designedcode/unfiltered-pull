@@ -2,18 +2,17 @@
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-export type RevealVariant = "up" | "down" | "left" | "right" | "fade" | "scale" | "blur";
-
+/** Lightweight opacity-only reveal — safe for mobile scroll performance. */
 export function Reveal({
   children,
   className = "",
   delay = 0,
-  variant = "up",
 }: {
   children: ReactNode;
   className?: string;
   delay?: number;
-  variant?: RevealVariant;
+  /** Kept for call-site compatibility; all variants use the same light fade. */
+  variant?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -32,7 +31,7 @@ export function Reveal({
           io.disconnect();
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -6% 0px" },
+      { threshold: 0.08, rootMargin: "0px 0px -4% 0px" },
     );
     io.observe(el);
     return () => io.disconnect();
@@ -41,7 +40,7 @@ export function Reveal({
   return (
     <div
       ref={ref}
-      className={`reveal reveal-${variant} ${visible ? "reveal-in" : ""} ${className}`}
+      className={`reveal ${visible ? "reveal-in" : ""} ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {children}

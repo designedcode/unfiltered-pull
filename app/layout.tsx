@@ -40,24 +40,24 @@ const script = Great_Vibes({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Unfiltered Pull | Raw tarot, rituals, and honest insight",
+    default: `Unfiltered Pull | ${site.tagline}`,
     template: "%s | Unfiltered Pull",
   },
   description: site.description,
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Unfiltered Pull | RAW. REAL. REVEALED.",
+    title: `Unfiltered Pull | ${site.tagline}`,
     description: site.description,
     url: site.url,
     siteName: site.name,
-    images: [{ url: "/brand/logo.jpg", width: 1200, height: 1200 }],
+    images: [{ url: "/brand/logo-hand.jpg", width: 1200, height: 1200 }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Unfiltered Pull",
+    title: `Unfiltered Pull | ${site.tagline}`,
     description: site.description,
-    images: ["/brand/logo.jpg"],
+    images: ["/brand/logo-hand.jpg"],
   },
   robots: { index: true, follow: true },
 };
