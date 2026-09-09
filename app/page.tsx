@@ -17,39 +17,43 @@ export default function HomePage() {
 
   return (
     <div className="overflow-x-clip">
-      <section className="relative overflow-hidden px-4 pt-10 pb-10">
-        <LeafIcon className="pointer-events-none absolute bottom-8 left-0 h-12 w-12 text-sage-deep/25" />
-        <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
-          <Image
-            src="/brand/moon-phases.png"
-            alt=""
-            width={640}
-            height={88}
-            className="h-auto w-full max-w-md object-contain"
-            priority
-          />
-          <h1 className="mt-6 max-w-xl font-heading text-[2rem] font-semibold leading-[1.08] text-charcoal sm:text-5xl">
-            Whatever’s weighing on you, bring it here.
-          </h1>
-          <p className="mt-2 font-heading text-xl italic text-gold-deep sm:text-2xl">{site.tagline}</p>
-          <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-ink/80 sm:text-base">
-            {brandSubtext}
-          </p>
-          <div className="mt-6 flex w-full max-w-sm flex-col gap-3">
-            <InstagramCTA className={`${primaryCtaClass} w-full`}>
-              Claim your free First Pull
-            </InstagramCTA>
-            <Link href="/services" className={`${secondaryCtaClass} w-full`}>
-              Browse services
-            </Link>
+      <section className="relative box-border flex min-h-[calc(95svh-4.5rem)] flex-col overflow-hidden px-4 pt-8 pb-2 sm:min-h-[80vh] sm:justify-center sm:py-10">
+        <LeafIcon className="pointer-events-none absolute bottom-10 left-0 h-14 w-14 text-sage-deep/30" />
+        <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col text-center sm:flex-none sm:justify-center">
+          <div className="flex min-h-0 flex-1 flex-col items-center justify-center sm:flex-none">
+            <Image
+              src="/brand/moon-phases.png"
+              alt=""
+              width={520}
+              height={72}
+              className="mx-auto h-9 w-auto max-w-[min(100%,20rem)] object-contain sm:h-11"
+              priority
+            />
+            <h1 className="mt-4 max-w-xl font-heading text-[2.35rem] font-semibold leading-[1.05] text-charcoal sm:mt-5 sm:text-5xl md:text-6xl">
+              Whatever’s weighing on you, bring it here.
+            </h1>
+            <p className="mt-2 font-heading text-xl italic text-gold-deep sm:mt-3 sm:text-2xl">
+              {site.tagline}
+            </p>
+            <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-ink/80 sm:mt-4 sm:text-base">
+              {brandSubtext}
+            </p>
           </div>
-          <p className="mx-auto mt-4 max-w-sm text-[11px] leading-relaxed text-ink/60 sm:text-xs">
-            {trustLine}
-          </p>
+          <div className="mt-6 flex w-full shrink-0 flex-col items-center sm:mt-5">
+            <div className="flex w-full max-w-md flex-col items-stretch gap-2.5 sm:max-w-none sm:flex-row sm:items-center sm:justify-center sm:gap-3">
+              <InstagramCTA className={primaryCtaClass}>Claim your free First Pull</InstagramCTA>
+              <Link href="/services" className={secondaryCtaClass}>
+                Browse services
+              </Link>
+            </div>
+            <p className="mx-auto mt-3 max-w-sm text-[11px] leading-relaxed text-ink/60 sm:mt-4 sm:max-w-md sm:text-xs">
+              {trustLine}
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="px-4 pb-16">
+      <section className="px-4 pb-16 pt-16">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-center text-4xl">What are you carrying?</h2>
           <p className="mx-auto mt-2 max-w-lg text-center text-sm text-ink/70">

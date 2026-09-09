@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { SiteJsonLd } from "@/components/JsonLd";
 import { Preloader } from "@/components/Preloader";
 import { StickyBar } from "@/components/StickyBar";
+import { brandSubtext } from "@/lib/copy";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -43,11 +44,11 @@ export const metadata: Metadata = {
     default: `Unfiltered Pull | ${site.tagline}`,
     template: "%s | Unfiltered Pull",
   },
-  description: site.description,
+  description: brandSubtext,
   alternates: { canonical: "/" },
   openGraph: {
     title: `Unfiltered Pull | ${site.tagline}`,
-    description: site.description,
+    description: brandSubtext,
     url: site.url,
     siteName: site.name,
     images: [{ url: "/brand/logo-hand.jpg", width: 1200, height: 1200 }],
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `Unfiltered Pull | ${site.tagline}`,
-    description: site.description,
+    description: brandSubtext,
     images: ["/brand/logo-hand.jpg"],
   },
   robots: { index: true, follow: true },

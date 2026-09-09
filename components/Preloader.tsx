@@ -10,8 +10,8 @@ export function Preloader() {
 
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const hold = reduced ? 400 : 2400;
-    const fade = reduced ? 0 : 450;
+    const hold = reduced ? 300 : 1000;
+    const fade = reduced ? 0 : 350;
 
     const hide = window.setTimeout(() => {
       setLeaving(true);
@@ -25,7 +25,7 @@ export function Preloader() {
 
   return (
     <div
-      className={`fixed inset-0 z-[80] flex flex-col items-center justify-center bg-ivory transition-opacity duration-[450ms] ${
+      className={`fixed inset-0 z-[80] flex flex-col items-center justify-center bg-ivory px-6 transition-opacity duration-[350ms] ${
         leaving ? "opacity-0" : "opacity-100"
       }`}
       role="status"
@@ -35,15 +35,15 @@ export function Preloader() {
       <Image
         src="/brand/logo-hand.jpg"
         alt=""
-        width={88}
-        height={88}
-        className="h-20 w-20 rounded-full object-cover sm:h-24 sm:w-24"
+        width={160}
+        height={160}
+        className="h-32 w-32 rounded-full object-cover sm:h-40 sm:w-40"
         priority
       />
-      <p className="mt-5 font-heading text-3xl text-charcoal sm:text-4xl">
+      <p className="mt-7 font-heading text-5xl text-charcoal sm:text-6xl">
         unfiltered <span className="font-script text-gold">pull</span>
       </p>
-      <p className="mt-3 font-accent text-[11px] uppercase tracking-[0.28em] text-gold-deep">
+      <p className="mt-4 font-accent text-sm uppercase tracking-[0.28em] text-gold-deep sm:text-base">
         {site.tagline}
       </p>
     </div>
