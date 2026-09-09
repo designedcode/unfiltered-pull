@@ -17,10 +17,10 @@ export default function HomePage() {
 
   return (
     <div className="overflow-x-clip">
-      <section className="relative box-border flex min-h-[calc(95svh-4.5rem)] flex-col overflow-hidden px-4 pt-8 pb-2 sm:min-h-[80vh] sm:justify-center sm:py-10">
+      <section className="relative box-border flex min-h-[calc(98svh-4.5rem)] flex-col overflow-hidden px-4 pt-8 sm:justify-center lg:px-6">
         <LeafIcon className="pointer-events-none absolute bottom-10 left-0 h-14 w-14 text-sage-deep/30" />
-        <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col text-center sm:flex-none sm:justify-center">
-          <div className="flex min-h-0 flex-1 flex-col items-center justify-center sm:flex-none">
+        <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col text-center sm:justify-center">
+          <div className="flex min-h-0 flex-1 flex-col items-center justify-center">
             <Image
               src="/brand/moon-phases.png"
               alt=""
@@ -39,7 +39,7 @@ export default function HomePage() {
               {brandSubtext}
             </p>
           </div>
-          <div className="mt-6 flex w-full shrink-0 flex-col items-center sm:mt-5">
+          <div className="mt-6 flex w-full shrink-0 flex-col items-center sm:mt-8">
             <div className="flex w-full max-w-md flex-col items-stretch gap-2.5 sm:max-w-none sm:flex-row sm:items-center sm:justify-center sm:gap-3">
               <InstagramCTA className={primaryCtaClass}>Claim your free First Pull</InstagramCTA>
               <Link href="/services" className={secondaryCtaClass}>
