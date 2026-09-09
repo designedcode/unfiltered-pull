@@ -17,7 +17,7 @@ export default function HomePage() {
 
   return (
     <div className="overflow-x-clip">
-      <section className="relative box-border flex min-h-[calc(98svh-4.5rem)] flex-col overflow-hidden px-4 pt-8 sm:justify-center lg:px-6">
+      <section className="relative box-border flex min-h-[calc(98svh-4.5rem)] flex-col overflow-hidden px-4 pt-8 pb-2 sm:justify-center lg:px-6">
         <LeafIcon className="pointer-events-none absolute bottom-10 left-0 h-14 w-14 text-sage-deep/30" />
         <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col text-center sm:justify-center">
           <div className="flex min-h-0 flex-1 flex-col items-center justify-center">
