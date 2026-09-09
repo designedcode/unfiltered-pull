@@ -19,7 +19,7 @@ export default function TermsPage() {
       </ul>
       <p className="mt-6 text-sm leading-relaxed text-ink/70">{disclaimer}</p>
       <p className="mt-4 text-sm text-ink/70">
-        All services are available subject to availability. Pricing is shared privately — never
+        All services are available subject to availability. Pricing is shared privately, never
         published here. First Pull is complimentary for first-time clients.
       </p>
     </div>

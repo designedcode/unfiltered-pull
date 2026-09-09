@@ -20,7 +20,7 @@ function Card({ item }: { item: Testimonial }) {
         ) : null}
         <figcaption className="p-5">
           <p className="font-accent text-[10px] uppercase tracking-[0.16em] text-terracotta">
-            Screenshot placeholder — replace with a real client review
+            Screenshot placeholder. Replace with a real client review
           </p>
           <p className="mt-2 text-sm leading-relaxed text-ink/80">{item.quote}</p>
         </figcaption>
@@ -65,7 +65,7 @@ export function TestimonialBoard() {
           </button>
         ))}
       </div>
-      <p className="mt-4 text-xs text-ink/55">Sample layout — real client notes coming soon.</p>
+      <p className="mt-4 text-xs text-ink/55">Sample layout. Real client notes coming soon.</p>
       <div className="mt-6 grid gap-4 md:grid-cols-2">
         {items.map((item) => (
           <Card key={item.id} item={item} />

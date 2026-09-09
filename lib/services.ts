@@ -50,7 +50,7 @@ export type Service = {
 const CORE_INTAKE = [
   "Your name",
   "The exact service name",
-  "Your question or situation in 2–4 sentences",
+  "Your question or situation in 2-4 sentences",
   "Preferred format: Video, Audio, Chat, or Voice notes",
   "A preferred time window",
 ];
@@ -61,7 +61,7 @@ const INTAKE: Record<IntakeKind, string[]> = {
     ...CORE_INTAKE,
     "Your connection to them (situationship, no-contact, dating, married)",
     "How long this has been going on",
-    "What you want clarity on — not their private accounts",
+    "What you want clarity on, not their private accounts",
   ],
   forecast: [
     ...CORE_INTAKE,
@@ -105,7 +105,7 @@ export const categories: Category[] = [
     title: "Signature Experiences",
     promise: "The named journeys people come back for",
     description:
-      "First Pull and the core Unfiltered Pull experiences — focused, honest, and built for the questions you are actually carrying.",
+      "First Pull and the core Unfiltered Pull experiences: focused, honest, and built for the questions you are actually carrying.",
   },
   {
     slug: "tarot",
@@ -119,7 +119,7 @@ export const categories: Category[] = [
     title: "Forecast and Future",
     promise: "Month-ahead through the year ahead",
     description:
-      "Timing, forecasts, and “what you need to know now” — possibilities, not guarantees.",
+      "Timing, forecasts, and “what you need to know now”: possibilities, not guarantees.",
   },
   {
     slug: "specialty",
@@ -133,7 +133,7 @@ export const categories: Category[] = [
     title: "Healing and Energy",
     promise: "Reiki, chakras, crystals, cord-cutting",
     description:
-      "Energy-based sessions for cleansing, alignment, and protection. Guidance and reflection — not medical care.",
+      "Energy-based sessions for cleansing, alignment, and protection. Guidance and reflection, not medical care.",
   },
   {
     slug: "shadow",
@@ -229,7 +229,7 @@ function makeService(
     tags: extra.tags ?? [cat.title, name],
     description:
       extra.description ??
-      `${name} is an Unfiltered Pull session inside ${cat.title.toLowerCase()}. Honest insight for the situation you are in — not a script of what you want to hear.`,
+      `${name} is an Unfiltered Pull session inside ${cat.title.toLowerCase()}. Honest insight for the situation you are in, not a script of what you want to hear.`,
     forWhom:
       extra.forWhom ??
       "People who want relief and clarity, not performance. Especially if you are overthinking, waiting, or repeating a pattern.",
@@ -249,7 +249,7 @@ export const services: Service[] = [
     isSignature: true,
     tags: ["Free", "Introductory", "Tarot"],
     description:
-      "A complimentary introductory reading for first-time clients. One situation, honest cards, no fluff — so you can feel the work before you go deeper.",
+      "A complimentary introductory reading for first-time clients. One situation, honest cards, no fluff, so you can feel the work before you go deeper.",
     forWhom:
       "First-time clients who want to know if this space is for them. Bring one real question.",
     whatYouGet:
@@ -265,7 +265,7 @@ export const services: Service[] = [
   makeService("Deep Dive", "signature", "core", {
     isSignature: true,
     description:
-      "A detailed reading when a quick answer is not enough — the story, the pattern, and the fork in the road.",
+      "A detailed reading when a quick answer is not enough: the story, the pattern, and the fork in the road.",
     forWhom: "When the situation has layers and a yes/no will not hold it.",
     whatYouGet: "A fuller spread, context, and the honest landscape of options.",
   }),
@@ -273,25 +273,11 @@ export const services: Service[] = [
     isSignature: true,
     tags: ["Love", "Situationship", "No-contact"],
     description:
-      "Explore feelings, patterns, dynamics, blocks, and possible paths forward — including the ones you do not want to hear.",
+      "Explore feelings, patterns, dynamics, blocks, and possible paths forward, including the ones you do not want to hear.",
     forWhom:
       "Stuck in a situationship, no-contact, hot-and-cold, or asking if this is love or attachment.",
     whatYouGet:
       "Clarity on the dynamic, your part in it, and whether to reach, wait, or walk.",
-  }),
-  makeService("Life Path", "signature", "core", {
-    isSignature: true,
-    description:
-      "Career, purpose, decisions, direction, and the next chapter — without destiny theatrics.",
-    forWhom: "When you are between jobs, cities, or identities and need a real read.",
-    whatYouGet: "Direction you can use this month, not a vague life purpose slogan.",
-  }),
-  makeService("Tarot + Healing", "signature", "healing", {
-    isSignature: true,
-    description:
-      "Tarot plus energy-based work for when insight alone is not landing in the body.",
-    forWhom: "When you understand the pattern and still cannot move.",
-    whatYouGet: "Cards for the story and energy work for the residue.",
   }),
   makeService("Shadow Work", "signature", "shadow", {
     isSignature: true,
@@ -299,6 +285,13 @@ export const services: Service[] = [
       "Recurring emotional patterns, triggers, blocks, and lessons through tarot and guided reflection.",
     forWhom: "If you keep choosing the same person in a different body.",
     whatYouGet: "The loop named clearly, and a way to stop handing your power away.",
+  }),
+  makeService("Tarot + Healing", "signature", "healing", {
+    isSignature: true,
+    description:
+      "Tarot plus energy-based work for when insight alone is not landing in the body.",
+    forWhom: "When you understand the pattern and still cannot move.",
+    whatYouGet: "Cards for the story and energy work for the residue.",
   }),
   makeService("Deep Transformation", "signature", "healing", {
     isSignature: true,
@@ -314,6 +307,13 @@ export const services: Service[] = [
       "A structured journey: where you are, what keeps repeating, and where you want to go next.",
     forWhom: "People ready for more than a one-off pull.",
     whatYouGet: "Three sessions with a through-line, not three disconnected readings.",
+  }),
+  makeService("Life Path", "signature", "core", {
+    isSignature: true,
+    description:
+      "Career, purpose, decisions, direction, and the next chapter, without destiny theatrics.",
+    forWhom: "When you are between jobs, cities, or identities and need a real read.",
+    whatYouGet: "Direction you can use this month, not a vague life purpose slogan.",
   }),
 
   makeService("One-Question Reading", "tarot", "core"),
@@ -362,7 +362,7 @@ export const services: Service[] = [
   makeService("What You Need to Know Reading", "forecast", "core"),
   makeService("What's Really Going On? Reading", "forecast", "core"),
   makeService("Glimpse of the Year", "forecast", "forecast"),
-  makeService("Past–Present–Future Reading", "forecast", "core"),
+  makeService("Past-Present-Future Reading", "forecast", "core"),
 
   makeService("Shadow Work Tarot", "specialty", "shadow"),
   makeService("Deja Vu Tarot", "specialty", "core"),
@@ -548,15 +548,27 @@ export const services: Service[] = [
   makeService("Self-Guided Healing Experiences", "digital", "digital"),
 ];
 
+const HIDDEN_CATEGORIES = new Set<CategorySlug>(["forecast", "digital"]);
+
+export const visibleCategories = categories.filter((c) => !HIDDEN_CATEGORIES.has(c.slug));
+
+export function isCategoryVisible(slug: string) {
+  return !HIDDEN_CATEGORIES.has(slug as CategorySlug);
+}
+
 export function getCategory(slug: string) {
-  return categories.find((c) => c.slug === slug);
+  const cat = categories.find((c) => c.slug === slug);
+  if (!cat || HIDDEN_CATEGORIES.has(cat.slug)) return undefined;
+  return cat;
 }
 
 export function getServicesByCategory(slug: CategorySlug) {
+  if (HIDDEN_CATEGORIES.has(slug)) return [];
   return services.filter((s) => s.category === slug);
 }
 
 export function getService(category: string, slug: string) {
+  if (HIDDEN_CATEGORIES.has(category as CategorySlug)) return undefined;
   return services.find((s) => s.category === category && s.slug === slug);
 }
 
@@ -568,7 +580,8 @@ export function searchServices(query: string) {
   const q = query.trim().toLowerCase();
   if (!q) return [];
   return services.filter((s) => {
-    const cat = getCategory(s.category);
+    if (HIDDEN_CATEGORIES.has(s.category)) return false;
+    const cat = categories.find((c) => c.slug === s.category);
     const hay = [s.name, s.description, s.forWhom, s.tags.join(" "), cat?.title]
       .join(" ")
       .toLowerCase();

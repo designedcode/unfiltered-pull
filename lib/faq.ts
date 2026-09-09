@@ -21,7 +21,7 @@ export const faqs = [
     id: "faq-04",
     question: "Can I reschedule?",
     answer:
-      "Yes — inform us at least 2 hours prior to your slot time. Rescheduling is subject to availability.",
+      "Yes. Inform us at least 2 hours prior to your slot time. Rescheduling is subject to availability.",
   },
   {
     id: "faq-05",

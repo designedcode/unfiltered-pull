@@ -2,7 +2,7 @@ export const site = {
   name: "Unfiltered Pull",
   tagline: "RAW. REAL. REVEALED.",
   description:
-    "Raw tarot, moon rituals, and spiritual guidance for emotional clarity. No fluff, no gatekeeping — honest insight for love, patterns, and your next chapter.",
+    "Raw tarot, moon rituals, and spiritual guidance for emotional clarity. No fluff, no gatekeeping. Honest insight for love, patterns, and your next chapter.",
   url: "https://unfiltered-pull.vercel.app",
   email: "unfiltered.pull@gmail.com",
   instagramHandle: "tarotbyunfiltered.pull",

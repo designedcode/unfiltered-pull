@@ -15,7 +15,7 @@ export const testimonials: Testimonial[] = [
     name: "Aanya M.",
     place: "Placeholder",
     quote:
-      "I came in overthinking every text. The reading named the pattern without sugarcoating it — and I finally stopped waiting for a reply that was never coming.",
+      "I came in overthinking every text. The reading named the pattern without sugarcoating it, and I finally stopped waiting for a reply that was never coming.",
     topic: "Love",
     avatar: "/placeholders/avatar-01.jpg",
     kind: "quote",
@@ -45,7 +45,7 @@ export const testimonials: Testimonial[] = [
     name: "Ishita P.",
     place: "Placeholder",
     quote:
-      "I asked about career and got direction I could actually use — not a vague destiny speech. That is why I came back.",
+      "I asked about career and got direction I could actually use, not a vague destiny speech. That is why I came back.",
     topic: "Life path",
     avatar: "/placeholders/avatar-04.jpg",
     kind: "quote",
@@ -55,7 +55,7 @@ export const testimonials: Testimonial[] = [
     name: "Client screenshot",
     place: "Replace later",
     quote:
-      "Screenshot placeholder — replace with a real client review. Sample: “Do they still think about me?” got a raw answer. I cried, then I booked the deeper session.",
+      "Screenshot placeholder. Replace with a real client review. Sample: “Do they still think about me?” got a raw answer. I cried, then I booked the deeper session.",
     topic: "Love",
     avatar: "/placeholders/avatar-02.jpg",
     kind: "screenshot",
@@ -66,7 +66,7 @@ export const testimonials: Testimonial[] = [
     name: "Client screenshot",
     place: "Replace later",
     quote:
-      "Screenshot placeholder — replace with a real voice-note or chat review. Sample: First Pull was free and still more honest than paid readings I have had elsewhere.",
+      "Screenshot placeholder. Replace with a real voice-note or chat review. Sample: First Pull was free and still more honest than paid readings I have had elsewhere.",
     topic: "Closure",
     avatar: "/placeholders/avatar-03.jpg",
     kind: "screenshot",
@@ -87,7 +87,7 @@ export const testimonials: Testimonial[] = [
     name: "Client screenshot",
     place: "Replace later",
     quote:
-      "Screenshot placeholder — replace with a real Instagram DM screenshot. Sample: Life Path helped me decide whether to stay or leave the job I kept calling a ‘sign’.",
+      "Screenshot placeholder. Replace with a real Instagram DM screenshot. Sample: Life Path helped me decide whether to stay or leave the job I kept calling a ‘sign’.",
     topic: "Life path",
     avatar: "/placeholders/avatar-01.jpg",
     kind: "screenshot",

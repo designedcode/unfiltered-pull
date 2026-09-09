@@ -1,5 +1,5 @@
 import { faqs } from "@/lib/faq";
-import { categories, services } from "@/lib/services";
+import { visibleCategories, services, isCategoryVisible } from "@/lib/services";
 import { site } from "@/lib/site";
 
 export function SiteJsonLd() {
@@ -36,12 +36,13 @@ export function FaqJsonLd() {
 }
 
 export function ServicesJsonLd() {
+  const visibleServices = services.filter((service) => isCategoryVisible(service.category));
   const data = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Unfiltered Pull services",
-    numberOfItems: services.length,
-    itemListElement: categories.map((category, index) => ({
+    numberOfItems: visibleServices.length,
+    itemListElement: visibleCategories.map((category, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: category.title,

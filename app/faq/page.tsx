@@ -43,7 +43,12 @@ export default function FaqPage() {
       </section>
       <p className="mt-6 text-sm text-ink/70">
         Email{" "}
-        <a href={`mailto:${site.email}`} className="underline decoration-gold underline-offset-4">
+        <a
+          href={`mailto:${site.email}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline decoration-gold underline-offset-4"
+        >
           {site.email}
         </a>{" "}
         or DM Instagram.
